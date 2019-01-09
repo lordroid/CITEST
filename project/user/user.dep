@@ -1,0 +1,1737 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>2386824688</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\Utils.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_sd.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_iwdg.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_at24c08b.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_can.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_pwm.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_spiflash.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_sdram.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\cxdish\host_depend.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_cs42l52.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_scu.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_timer.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\cxdish\CxFlash.h</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_adc.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_iis.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_mpu.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_gpio.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\cs42l52.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\cxdish\CxFlash.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\cxdish\cxdish.h</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\cxdish\common.h</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\iic_cx.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\adpcm.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\cxdish\cxdish.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\cxdish\command.h</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_it.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_sdram.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_sd.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_spi.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_timer.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_spiflash.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_suart.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_wdt.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_TimerWdt.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_uart.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_xpwm.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_cs42l52.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_startup.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_adc.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\diskio.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_at24c08b.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_can.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_gpio.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_iis.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_mpu.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_pwm.pbi</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_adc.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_can.c</file>
+      <file>$PROJ_DIR$\..\..\ci_denoise\denoise_debug_0.1.0.a</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_uart.c</file>
+      <file>$PROJ_DIR$\..\..\ci_denoise\ci_denoise.h</file>
+      <file>$PROJ_DIR$\..\..\ci_denoise\ci_denoise.c</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_twdg.c</file>
+      <file>$PROJ_DIR$\..\..\ci_denoise\denoise_api.h</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\src\smt_xpwm.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_gpio.c</file>
+      <file>$PROJ_DIR$\..\..\lib\cikd_asr0.6.5.1.a</file>
+      <file>$PROJ_DIR$\..\..\freertos\portable\IAR\ARM_CM4F\portasm.s</file>
+      <file>$PROJ_DIR$\..\..\freertos\list.c</file>
+      <file>$PROJ_DIR$\..\..\fatfs\diskio.h</file>
+      <file>$PROJ_DIR$\..\..\fatfs\integer.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\croutine.c</file>
+      <file>$PROJ_DIR$\..\..\freertos\portable\MemMang\heap_4.c</file>
+      <file>$PROJ_DIR$\..\..\fatfs\ffconf.h</file>
+      <file>$PROJ_DIR$\..\..\fatfs\ff.c</file>
+      <file>$PROJ_DIR$\..\..\fatfs\ff.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\portable\IAR\ARM_CM4F\port.c</file>
+      <file>$PROJ_DIR$\..\..\freertos\event_groups.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_mpu.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_TimerWdt.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_ir.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_i2c.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_dma.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_spiflash.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_scu.c</file>
+      <file>$PROJ_DIR$\..\..\fatfs\diskio.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_timer.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\misc.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_spi.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_sd.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_pwm.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_wdt.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_uart.c</file>
+      <file>$PROJ_DIR$\..\..\fatfs\ccsbcs.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_suart.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_xpwm.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\src\ci100x_sdram.c</file>
+      <file>$PROJ_DIR$\..\..\freertos\portable\IAR\ARM_CM4F\portmacro.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\queue.c</file>
+      <file>$PROJ_DIR$\..\..\freertos\timers.c</file>
+      <file>$PROJ_DIR$\..\..\lib\asr_driver_v2.3_20181109.a</file>
+      <file>$PROJ_DIR$\..\..\freertos\tasks.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\misc.h</file>
+      <file>$PROJ_DIR$\..\..\common\user\core_cm4.h</file>
+      <file>$PROJ_DIR$\..\..\common\user\core_cmInstr.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_iisdma.h</file>
+      <file>$PROJ_DIR$\..\..\common\user\core_cmFunc.h</file>
+      <file>$PROJ_DIR$\..\..\common\user\core_cm4_simd.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_xpwm.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_suart.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_can.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_wdt.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_dma.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_uart.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_gpio.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_i2c.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_scu.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_timer.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_asr.h</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_gpio.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_i2c.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_pwm.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_spiflash.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_mpu.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_sd.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_TimerWdt.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_scu.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\task_asr.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\test_stamp_board.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\Fw_updata.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\main.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\Task_key.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_scu.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\user_main.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\portasm.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\CxFlash.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\cxdish.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\host_depend.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ff.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\cs42l52.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\iic_cx.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\adpcm.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_mpu.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_pwm.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_scu.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_sd.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_sdram.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_spiflash.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_timer.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_adc.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_gpio.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_i2c.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_ir.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_mpu.o</file>
+      <file>$PROJ_DIR$\..\..\common\user\ci100x_malloc.c</file>
+      <file>$PROJ_DIR$\..\..\common\user\ci100x_startup.c</file>
+      <file>$PROJ_DIR$\..\..\common\user\system_ci100x.c</file>
+      <file>$PROJ_DIR$\..\..\common\user\asr_api.h</file>
+      <file>$PROJ_DIR$\..\..\common\user\ci100x_asrcmd.c</file>
+      <file>$PROJ_DIR$\..\..\common\user\ci100x_asrcmd.h</file>
+      <file>$PROJ_DIR$\..\..\common\user\ci100x_global.c</file>
+      <file>$PROJ_DIR$\..\..\common\user\ci100x_global.h</file>
+      <file>$PROJ_DIR$\..\..\common\user\gpio_config.h</file>
+      <file>$PROJ_DIR$\..\..\common\user\ci100x_it.c</file>
+      <file>$PROJ_DIR$\..\..\common\user\ci100x_it.h</file>
+      <file>$PROJ_DIR$\..\..\common\user\com2_task.c</file>
+      <file>$PROJ_DIR$\..\..\common\user\Fw_updata.c</file>
+      <file>$PROJ_DIR$\..\..\common\user\includes.h</file>
+      <file>$PROJ_DIR$\..\..\common\user\main.c</file>
+      <file>$PROJ_DIR$\..\..\common\user\nvdata_save.c</file>
+      <file>$PROJ_DIR$\..\..\common\user\platform_config.h</file>
+      <file>$PROJ_DIR$\..\..\common\user\task_asr.c</file>
+      <file>$PROJ_DIR$\..\..\common\user\Task_key.c</file>
+      <file>$PROJ_DIR$\..\..\common\user\test_stamp_board.c</file>
+      <file>$PROJ_DIR$\..\..\common\user\user_config.h</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\system_ci100x.pbi</file>
+      <file>$PROJ_DIR$\..\..\common\user\user_main.c</file>
+      <file>$PROJ_DIR$\..\..\common\user\user_main.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_global.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_scu.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_sd.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_sdram.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_uart.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_twdg.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_spiflash.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_timer.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_uart.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_xpwm.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\Utils.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci_denoise.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_adc.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_can.pbi</file>
+      <file>$PROJ_DIR$\..\..\common\user\smt.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\include\portable.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_adc.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\include\mpu_wrappers.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\include\task.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\include\queue.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\include\deprecated_definitions.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\include\list.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\include\croutine.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\include\semphr.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\include\event_groups.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\include\timers.h</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_sdram.pbi</file>
+      <file>$TOOLKIT_DIR$\lib\m7M_tlv.a</file>
+      <file>$PROJ_DIR$\ci100x.icf</file>
+      <file>$TOOLKIT_DIR$\lib\dlpp7M_tl_nc.a</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\user.map</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\inc\smt_at24c08b.h</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\com2_task.o</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\inc\smt_adc.h</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_iwdg.pbi</file>
+      <file>$PROJ_DIR$\..\..\common\user\com2_task.h</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_can.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_cs42l52.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_gpio.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_iis.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\event_groups.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\heap_4.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\port.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_malloc.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\list.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\tasks.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_startup.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\queue.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\timers.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_asrcmd.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\system_ci100x.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_global.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_pwm.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\cs42l52.o</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_sdram.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_TimerWdt.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_iis.h</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\inc\smt_iis.h</file>
+      <file>$PROJ_DIR$\..\..\common\user\ci100x_malloc.h</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\inc\smt_uart.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_sd.h</file>
+      <file>$PROJ_DIR$\..\..\ci_smic_denoise\ci_denoise.c</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_spiflash.h</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\inc\smt_cs42l52.h</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\inc\smt_spiflash.h</file>
+      <file>$PROJ_DIR$\..\..\common\user\task_asr.h</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\inc\smt_gpio.h</file>
+      <file>$PROJ_DIR$\..\..\ci_smic_denoise\denoise_api.h</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_at24c08b.o</file>
+      <file>$PROJ_DIR$\..\..\ci_smic_denoise\ci_denoise.h</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_can.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci_denoise.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_iwdg.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_dma.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_xpwm.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\Utils.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\cxdish.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_uart.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_twdg.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\CxFlash.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\host_depend.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\adpcm.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\include\FreeRTOS.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\include\projdefs.h</file>
+      <file>$PROJ_DIR$\..\..\freertos\include\FreeRTOSConfig.h</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_dma.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\iic_cx.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\smt_adc.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\croutine.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_ir.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\misc.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ccsbcs.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_spi.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\timers.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\com2_task.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_it.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\Fw_updata.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\main.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\nvdata_save.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\task_asr.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\Task_key.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\img\user\user.bin</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\user_main.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\test_stamp_board.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\img\user\user.out</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\iar_dlmalloc.h</file>
+      <file>$PROJ_DIR$\..\..\common\user\misc.h</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\inc\smt_sdram.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_mpu.h</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\inc\adpcm.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_spi.h</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\Ci100x_pwm.h</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+      <file>$PROJ_DIR$\..\..\drivers\inc\ci100x_ir.h</file>
+      <file>$PROJ_DIR$\..\..\bsp_test\inc\cs42l52.h</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\nvdata_save.o</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_malloc.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_timer.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_suart.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_asrcmd.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_xpwm.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ci100x_wdt.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\misc.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\diskio.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ccsbcs.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\user.pbd</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\ff.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\croutine.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\list.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\event_groups.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\heap_4.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\port.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\queue.pbi</file>
+      <file>$PROJ_DIR$\..\..\fw_updata\obj\user\tasks.pbi</file>
+      <file>$PROJ_DIR$\..\..\freertos\include\StackMacros.h</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\Utils.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 180</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 247</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 157 259 294 254 170 257 292 261 295 168 255 260 256 262 264 265 263 258 266 270 267 272 271 185 190 87 268 187 188 191 189 192 193 194 195 65 60 63 59 186 184 93 94 269 96 97 98 99 100 101 102 103 104 92 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_sd.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 172</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 135</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 232 106 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 102 151 270 267 255 272 271 185 190 87 187 188 191 189 192 193 194 195 65 60 63 59 256 263 258 230 103 168 260</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_iwdg.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 206</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 244</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 101 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 92 103 157 259 168 255 260 256 262 264 265 263 258 270 267 272 271 185 190 87 187 188 191 189 192 193 194 195 65 60 63 59 186 98 99 100 102 104 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_at24c08b.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 40</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 240</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 203 103 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 106 154 92 105 263 255 258</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_can.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 41</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 208</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 100 103 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 106 92</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_pwm.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 45</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 133</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 157 259 294 254 170 257 292 261 295 168 255 260 256 262 264 265 263 258 266 270 267 272 271 185 190 87 268 187 188 191 189 192 193 194 195 65 60 63 59 186 184 93 94 269 96 97 98 99 100 101 102 103 104 92 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230 302 167</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_spiflash.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 176</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 137</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 234 102 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 151 270 267 255 272 271 185 190 87 187 188 191 189 192 193 194 195 92 106 103 236 263 258 164 152 160</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_sdram.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 173</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 136</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 298 226 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 103 256 255 263 258 106</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\cxdish\host_depend.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 127</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 252</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 157 259 294 254 170 257 292 261 295 168 255 260 256 262 264 265 263 258 266 270 267 272 271 185 190 87 268 187 188 191 189 192 193 194 195 65 60 63 59 186 184 93 94 269 96 97 98 99 100 101 102 103 104 92 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230 12 24 20</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_cs42l52.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 36</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 209</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 235 105 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 228 92 106 95 103 263 255 258 305 300 234 102 151 270 267 272 271 185 190 87 187 188 191 189 192 193 194 195 229 157 259 168 260 256 262 264 265 65 60 63 59 186 98 99 100 101 104 107 227 226 108 149 164 152 160 232 231 297 147 236 238 230 207</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_scu.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 171</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 134</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 106 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 103 157 259 168 255 260 256 262 264 265 263 258 270 267 272 271 185 190 87 187 188 191 189 192 193 194 195 65 60 63 59 186 98 99 100 101 102 104 92 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_timer.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 177</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 138</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 104 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 92 106 107 103</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_adc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 38</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 275</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 186 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 98 106 92 205 231 103 104 157 259 168 255 260 256 262 264 265 263 258 270 267 272 271 185 190 87 187 188 191 189 192 193 194 195 65 60 63 59 99 100 101 102 107 105 95 227 226 108 234 151 149 164 152 160 232 147 229 228 235 236 238 230 167</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_iis.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 43</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 211</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 229 228 92 266 294 254 170 257 292 261 295 184 93 94 269 268 96 97 106 95 103 157 259 168 255 260 256 262 264 265 263 258 270 267 272 271 185 190 87 187 188 191 189 192 193 194 195 65 60 63 59 186 98 99 100 101 102 104 107 105 227 226 108 234 151 149 164 152 160 232 231 297 147 235 236 238 230</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_mpu.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 44</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 132</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 299 103 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 263 255 258</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_gpio.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 42</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 210</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 238 104 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 92 106 103</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\cs42l52.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 129</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 225</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 305 235 105 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 228 92 106 95 103</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\cxdish\CxFlash.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 125</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 251</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 266 294 254 170 257 292 261 295 263 255 258 168 260 12 24 157 259 256 262 264 265 270 267 272 271 185 190 87 268 187 188 191 189 192 193 194 195 65 60 63 59 186 184 93 94 269 96 97 98 99 100 101 102 103 104 92 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230 20</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\iic_cx.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 130</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 274</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 256 294 254 170 257 292 261 295 255 259 263 258 157 168 260 262 264 265 266 270 267 272 271 185 190 87 268 187 188 191 189 192 193 194 195 65 60 63 59 186 184 93 94 269 96 97 98 99 100 101 102 103 104 92 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\adpcm.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 131</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 253</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 300 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\cxdish\cxdish.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 126</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 248</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 168 294 254 170 257 292 261 295 255 260 256 263 258 24 157 259 262 264 265 266 270 267 272 271 185 190 87 268 187 188 191 189 192 193 194 195 65 60 63 59 186 184 93 94 269 96 97 98 99 100 101 102 103 104 92 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230 12 20</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_adc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 182</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 139</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 186 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_can.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 183</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 242</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 100 92 266 294 254 170 257 292 261 295 184 93 94 269 268 96 97 263 255 258</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_uart.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 178</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 249</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 231 103 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 106 92 102</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\ci_denoise\ci_denoise.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 181</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 243</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 107 106 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 164 152 160 151 270 267 255 272 271 185 190 87 187 188 191 189 192 193 194 195 263 258 157 259 168 260 256 262 264 265 65 60 63 59 186 98 99 100 101 102 103 104 92 105 95 227 226 108 234 149 232 231 297 147 229 228 235 236 238 230 50 53</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_twdg.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 175</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 250</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\bsp_test\src\smt_xpwm.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 179</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 246</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 98 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 103 157 259 168 255 260 256 262 264 265 263 258 270 267 272 271 185 190 87 187 188 191 189 192 193 194 195 65 60 63 59 186 99 100 101 102 104 92 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_gpio.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 109</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 140</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 104 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 92 106</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\freertos\portable\IAR\ARM_CM4F\portasm.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 124</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>AARM</name>
+          <file> 272</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\freertos\list.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 319</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 216</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 256 294 254 170 257 292 261 295 255 270 267 266 272 271 185 190 87 268 187 191</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\freertos\croutine.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 318</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 276</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 270 267 294 254 170 257 292 261 295 255 266 272 271 185 190 87 268 187 188 191 192</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\freertos\portable\MemMang\heap_4.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 321</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 213</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 256 294 254 170 257 292 261 295 255 270 267 266 272 271 185 190 87 268 187 188 191</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\fatfs\ff.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 317</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 128</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 65 60 63 59</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\freertos\portable\IAR\ARM_CM4F\port.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 322</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 214</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 268 294 270 267 254 170 257 292 261 295 255 266 272 271 185 190 87 187 188 191</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\freertos\event_groups.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 320</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 212</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 256 294 254 170 257 292 261 295 255 270 267 266 272 271 185 190 87 268 187 188 191 195 194</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_mpu.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 113</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 143</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 299</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_TimerWdt.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 115</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 33</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 227 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 92 106</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_ir.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 277</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 142</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 304 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_i2c.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 110</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 141</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 92 266 294 254 170 257 292 261 295 184 93 94 269 268 96 97 263 255 258 105 151 270 267 272 271 185 190 87 187 188 191 189 192 193 194 195</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_dma.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 273</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 245</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 102 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_spiflash.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 112</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 30</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 234 102 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 151 270 267 255 272 271 185 190 87 187 188 191 189 192 193 194 195 92 106 103</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_scu.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 116</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 122</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 106 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\fatfs\diskio.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 314</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 39</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 59 60 232 106 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 102 151 270 267 255 272 271 185 190 87 187 188 191 189 192 193 194 195 65 63 256 263 258</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_timer.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 308</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 29</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 107 92 266 294 254 170 257 292 261 295 184 93 94 269 268 96 97 103</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\misc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 313</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 278</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 92 266 294 254 170 257 292 261 295 184 93 94 269 268 96 97</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_spi.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 280</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 28</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 301 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_sd.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 114</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 27</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 232 106 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 102 151 270 267 255 272 271 185 190 87 187 188 191 189 192 193 194 195 65 60 63 59 256 263 258 103 157 259 168 260 262 264 265 186 98 99 100 101 104 92 107 105 95 227 226 108 234 149 164 152 160 231 297 147 229 228 235 236 238 230</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_pwm.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 111</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 224</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 107 302 266 294 254 170 257 292 261 295 92 184 93 94 269 268 96 97</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_wdt.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 312</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 32</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 101 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 92</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_uart.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 174</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 34</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 103 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 106 92 259 164 152 160 168 255 260</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\fatfs\ccsbcs.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 315</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 279</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 65 60 63 59</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_suart.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 309</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 31</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 99 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 270 267 255 272 271 185 190 87 187 103 262 264 265</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_xpwm.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 311</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 35</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 98 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 106 92</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\drivers\src\ci100x_sdram.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 196</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 26</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 226 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 103 157 259 168 255 260 256 262 264 265 263 258 270 267 272 271 185 190 87 187 188 191 189 192 193 194 195 65 60 63 59 186 98 99 100 101 102 104 92 106 107 105 95 227 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\freertos\queue.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 323</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 219</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 256 294 254 170 257 292 261 295 255 263 258 270 267 266 272 271 185 190 87 268 187 188 191 189</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\freertos\timers.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 281</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 220</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 256 294 254 170 257 292 261 295 255 270 267 266 272 271 185 190 87 268 187 188 191 189 195</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\freertos\tasks.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 324</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 217</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 256 294 254 170 257 292 261 295 255 263 258 270 267 266 272 271 185 190 87 268 187 188 191 195 325 168 260</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\common\user\ci100x_malloc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 307</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 215</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 230 256 294 254 170 257 292 261 295 255 168 260 259 263 258 103 184 93 266 94 269 268 96 97</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\common\user\ci100x_startup.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 37</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 218</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 154 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\common\user\system_ci100x.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 165</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 222</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\common\user\ci100x_asrcmd.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 310</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 221</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 149 164 152 160</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\common\user\ci100x_global.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 169</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 223</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 151 270 267 294 254 170 257 292 261 295 255 266 272 271 185 190 87 268 187 188 191 189 192 193 194 195</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\common\user\ci100x_it.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 283</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 25</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 154 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 157 259 168 255 260 256 262 264 265 263 258 270 267 272 271 185 190 87 187 188 191 189 192 193 194 195 65 60 63 59 186 98 99 100 101 102 103 104 92 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230 296</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\common\user\com2_task.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 282</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 204</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 157 259 294 254 170 257 292 261 295 168 255 260 256 262 264 265 263 258 266 270 267 272 271 185 190 87 268 187 188 191 189 192 193 194 195 65 60 63 59 186 184 93 94 269 96 97 98 99 100 101 102 103 104 92 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230 167 207</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\common\user\Fw_updata.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 284</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 119</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 157 259 294 254 170 257 292 261 295 168 255 260 256 262 264 265 263 258 266 270 267 272 271 185 190 87 268 187 188 191 189 192 193 194 195 65 60 63 59 186 184 93 94 269 96 97 98 99 100 101 102 103 104 92 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\common\user\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 285</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 120</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 157 259 294 254 170 257 292 261 295 168 255 260 256 262 264 265 263 258 266 270 267 272 271 185 190 87 268 187 188 191 189 192 193 194 195 65 60 63 59 186 184 93 94 269 96 97 98 99 100 101 102 103 104 92 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230 167</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\common\user\nvdata_save.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 286</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 306</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 157 259 294 254 170 257 292 261 295 168 255 260 256 262 264 265 263 258 266 270 267 272 271 185 190 87 268 187 188 191 189 192 193 194 195 65 60 63 59 186 184 93 94 269 96 97 98 99 100 101 102 103 104 92 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\common\user\task_asr.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 287</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 117</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 157 259 294 254 170 257 292 261 295 168 255 260 256 262 264 265 263 258 266 270 267 272 271 185 190 87 268 187 188 191 189 192 193 194 195 65 60 63 59 186 184 93 94 269 96 97 98 99 100 101 102 103 104 92 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230 237 167 296</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\common\user\Task_key.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 288</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 121</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 157 259 294 254 170 257 292 261 295 168 255 260 256 262 264 265 263 258 266 270 267 272 271 185 190 87 268 187 188 191 189 192 193 194 195 65 60 63 59 186 184 93 94 269 96 97 98 99 100 101 102 103 104 92 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230 19 205 237 167</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\common\user\test_stamp_board.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 291</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 118</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 157 259 294 254 170 257 292 261 295 168 255 260 256 262 264 265 263 258 266 270 267 272 271 185 190 87 268 187 188 191 189 192 193 194 195 65 60 63 59 186 184 93 94 269 96 97 98 99 100 101 102 103 104 92 106 107 105 95 227 226 108 234 151 149 164 152 160 232 231 297 147 229 228 235 236 238 230</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\common\user\user_main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 290</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 123</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 266 294 254 170 257 292 261 295 167 270 267 255 272 271 185 190 87 268 187 151 188 191 189 192 193 194 195 164 152 160 157 259 168 260 256 262 264 265 263 258 65 60 63 59 186 184 93 94 269 96 97 98 99 100 101 102 103 104 92 106 107 105 95 227 226 108 234 149 232 231 297 147 229 228 235 236 238 230 19 207</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\ci_smic_denoise\ci_denoise.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 181</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 243</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 107 106 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 164 152 160 151 270 267 255 272 271 185 190 87 187 188 191 189 192 193 194 195 263 258 157 259 168 260 256 262 264 265 65 60 63 59 186 98 99 100 101 102 103 104 92 105 95 227 226 108 234 149 232 231 147 229 228 235 236 238 230 241 239</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 107 106 184 93 266 294 254 170 257 292 261 295 94 269 268 96 97 164 152 160 151 270 267 255 272 271 185 190 87 187 188 191 189 192 193 194 195 263 258 157 259 168 260 256 262 264 265 65 60 63 59 186 98 99 100 101 102 103 104 92 105 95 227 226 108 234 149 232 231 297 147 229 228 235 236 238 230 241 239</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 293 200</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\fw_updata\img\user\user.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 200</file>
+        </tool>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 289</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 198 253 90 279 139 221 242 245 223 140 141 142 25 215 143 224 122 27 26 28 30 218 31 29 33 34 32 35 243 56 204 276 225 248 251 48 39 212 128 119 213 252 274 216 120 278 306 214 124 219 275 240 208 209 210 211 244 132 133 134 135 136 137 138 250 249 246 222 117 121 217 118 220 123 247 201 202 199 197 303</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+
