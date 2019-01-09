@@ -13,8 +13,7 @@ extern void  vol_dn();
 void init_timer3_getresource(void);
 void cpu_rate_print(void);
 //extern void ASR_VAD_DNN_Init(void );
-
-
+unsigned char MCUwork=0,powerup=0,key_holding_flag=0;
 void start_updata()
 {
     NVIC_DisableIRQ(VAD_IRQn);
@@ -42,72 +41,43 @@ void end_updata()
 
 void userapp_deal_key_msg(sys_key_msg_data_t  *key_msg)
 {
-    uint32_t key;
-    uint32_t index;
-    int32_t ver[4];
-    (void)ver;
-    
+    uint32_t key;    
     key = key_msg->key;
-    mprintf("recivce key 0x%x\n", key);
     switch(key)
     {
-        case (KEY_SW2|C_KEY_HOLD):
-            #if CX_20921_UPDATA 
-            start_updata();
-            vTaskDelay(pdMS_TO_TICKS(20));
-            // cx2092x_upgrade();
-            if(0 > cx2092x_upgrade())
+        case (key3evt|keyhold):
+		    if(MCUwork==0)
             {
-                index = sysinit_index+1;
-                xQueueSend(play_Q, &index,200);
-            }
-            end_updata();
-            #endif                    
+                MCUwork=1;
+                GPIO_Output(GPIO0,GPIO_Pin7,0);  
+	            GPIO_Output(GPIO0,GPIO_Pin16,1);
+		    }
+			else
+			{
+                MCUwork=0;
+                GPIO_Output(GPIO0,GPIO_Pin7,1);  
+	            GPIO_Output(GPIO0,GPIO_Pin16,0);
+			}
             break;
-        case (KEY_SW3|C_KEY_HOLD):
-            start_updata();
-            vTaskDelay(pdMS_TO_TICKS(20));
-            if(0 > user_code_updata_fromTF())
-            {
-                index = sysinit_index+1;
-                xQueueSend(play_Q, &index,200);
-            }
-            end_updata();
-            break;
-            /*	case KEY_SW3:
-            //set_mode("ZMP8");
-            sound_comm_start = 1;
-            break;
-            case KEY_SW4:
-            sound_comm_start = 0;
-            //set_mode("ZSW2");
-            break;*/
-        case KEY_SW5:
-            #if CX_20921_UPDATA                  
-            get_fw_version();
-            getfwver(ver);
-            get_mode();
-            #endif                                            
-            break;
-        case KEY_SW6:
-            vol_up();
-            index = 0;
-            xQueueSend(play_Q, &index,200);
-            break;
-        case KEY_SW7:
-            vol_dn();
-            index = 0;
-            xQueueSend(play_Q, &index,200);
-            break;
-        case KEY_SW1:
-            #if CPU_RATE_PRINT
-            cpu_rate_print();
-            #endif
-            break;
+//        case key3evt|keyhold|keyrelease:
+//			key_holding_flag = 0;
+//			break;
+//		case key3evt|keyhold|keepholding :
+//			key_holding_flag = 1;
+//			break;	
+//        case key3evt|keyhold|keepholding|keyrelease :
+//            key_holding_flag = 0;
+//            break;
+//        case key3evt|keyrelease :
+//            if(MCUwork==0)
+//            {                                    
+//                GPIO_Output(GPIO0,GPIO_Pin16,0);                   
+//            } 
+//			break;
         default:
             break;
     }
-    mprintf("process key ok!\n");
+
 }
 
 

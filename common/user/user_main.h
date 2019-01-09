@@ -16,6 +16,18 @@ extern "C"
 {
 #endif
 
+#define key1evt 1
+#define key2evt 2
+#define key3evt 4
+
+#define key12evt (key1evt|key2evt)
+#define key13evt (key1evt|key3evt)
+#define key23evt (key2evt|key3evt)
+
+#define keyhold (1<<6)
+#define keyrelease (1<<5)
+#define keepholding (1<<4)
+
 typedef enum
 {
     MSG_TYPE_SYS_ASR = 0,

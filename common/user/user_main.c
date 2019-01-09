@@ -30,6 +30,21 @@ struct user_manage_type
     uint32_t wakeup_voice_state;
 }g_user_manage_t ;
 
+#define SPKEYCNT 1200      //short press key count
+#define LPKEYCNT 50000     //long press key count
+#define nokey 0
+
+
+
+#define key3            GPIO_ReadDATA(GPIO0,(GPIO_Pinx)15)
+#define key1            GPIO_ReadDATA(GPIO0,(GPIO_Pinx)5)	
+#define key2            GPIO_ReadDATA(GPIO0,(GPIO_Pinx)6)
+
+
+unsigned char tempkey1,tempkey2,tempkey3,keyvalue;
+
+unsigned long keycnt=0;
+
 
 /**************************************************************************
                     function prototype
@@ -40,6 +55,9 @@ extern void Asr_Playback(int index);
 extern void uart2_send_AsrResult(unsigned int index,float score);
 extern void RGBChangeColor(int index);
 extern void RGBDataInit(void);
+extern void IWDG_feed(void);
+
+
 #if USE_USER_UART
 extern void Suart2_Init();
 #endif
@@ -51,6 +69,87 @@ BaseType_t send_play_by_func_index(int32_t func_index);
 /**************************************************************************
                     global 
 ****************************************************************************/
+	void Key_Scan(void)
+	{
+	  static unsigned char	slowkeyhold;
+	  static unsigned long	temp;
+	  tempkey3 = tempkey2;
+	  if (key3==0)
+	  { tempkey1 = key3evt; }
+	  else if (!key1)
+	  { tempkey1 = key1evt; }
+	  else if (!key2)
+	  { tempkey1 = key2evt; }
+	  else
+	  { 
+		  tempkey1 = nokey;
+	  }
+	
+	  if (!key2)
+	  { tempkey1 |= key2evt; }
+	  else if (!key1)
+	  { tempkey1 |= key1evt; }
+	
+	  if (tempkey2!=tempkey1)
+	  { 
+		  tempkey2 = tempkey1;
+		  if (keycnt>SPKEYCNT){
+			tempkey2 = nokey;
+		  }
+	  }
+	  else
+	  {
+		if (keycnt<150000)
+		{ keycnt += 1; }
+		else
+		{ keycnt = LPKEYCNT + 1; }/**/
+	  }
+	
+	  if ((keycnt<SPKEYCNT)&&(tempkey2==nokey))
+	  {
+		keycnt = 0;
+		keyvalue = nokey;											  // 1.nokey
+		return;
+	  }
+	  if ((keycnt==SPKEYCNT)&&(tempkey2!=nokey))
+	  {
+		keyvalue = tempkey3;										  // 2.key?evt
+		return;
+	  }
+	  if ((keycnt>=SPKEYCNT)&&(keycnt<LPKEYCNT)&&(tempkey2==nokey)) 		  // keycnt>=SPKEYCNT
+	  {
+		keycnt = 0;
+		keyvalue = tempkey3|keyrelease; 							  // 3.key?evt|keyrelease
+		return;
+	  }
+	  if ((keycnt==LPKEYCNT)&&(tempkey2!=nokey))
+	  {
+		keyvalue = tempkey3|keyhold;								  // 4.key?evt|keyhold
+		slowkeyhold = 0;
+		temp = SPKEYCNT*80;
+		return;
+	  }
+	  if ((keycnt>LPKEYCNT)&&(tempkey2!=nokey))
+	  {
+		if ((keycnt%temp)==0)
+		{
+		  if (slowkeyhold<2)
+		  {
+			slowkeyhold += 1;
+		  }
+		  else
+		  { temp = SPKEYCNT; }
+		  keyvalue = tempkey3|keyhold|keepholding;					  // 5.key?evt|keyhold|keepholding
+		}
+		return;
+	  }
+	  if ((keycnt>=LPKEYCNT)&&(tempkey2==nokey))//&&(slowkeyhold==0)
+	  {
+		keycnt = 0;
+		keyvalue = tempkey3|keyhold|keyrelease; 					  // 6. key?evt|keyhold|keyrelease
+		return;
+	  }
+	}
 
 void Switch_Language_play_voice(void)
 {
@@ -167,6 +266,26 @@ void GetNVUserData(void)
         nvdata_save.volset = VOLUME_DEFAULT; 
     }
 }
+void  UserTaskKeyScan(void *p_arg)
+{
+
+    
+    while(1)
+    {
+//        iwdg_rstInit(IWDG_TIME); 
+	    IWDG_feed();
+
+        Key_Scan();
+		if(keyvalue != nokey)	
+		{
+		    user_msg_t send_msg;
+            send_msg.msg_type = MSG_TYPE_SYS_KEY;
+            send_msg.msg_data.key_data.key = keyvalue;
+			xQueueSend(user_task_queue,&send_msg,20/portTICK_PERIOD_MS);
+			keyvalue = nokey;
+		}
+	}
+}
 
 void  UserTaskManageProcess(void *p_arg)
 {
@@ -177,9 +296,6 @@ void  UserTaskManageProcess(void *p_arg)
 
     vol_set(nvdata_save.volset);
 
-#if RGB_ENABLE
-    RGBDataInit();
-#endif
 
     while(1)
     {

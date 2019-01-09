@@ -36,6 +36,7 @@ extern void MainCallback(void *p);
 extern void vTaskFileFATfsDealWith(void*pvParameters);
 extern void WriteReadSDPCM(void*pvParameters);
 extern void  UserTaskManageProcess(void *p_arg);
+extern void  UserTaskKeyScan(void *p_arg);
 
 extern "C" void vTask_Test(void *pvParameters);
 extern void ADKey_Init(int adcx);
@@ -91,13 +92,13 @@ void _IO_init(void)
     Scu_SetIOReuse( UART1_RX_PAD,THIRD_FUNCTION);
     GPIO_Output(GPIO0,GPIO_Pin2,0);    
     
-#if (USE_USER_UART && !USER_UART_USE_UART1) 
-     //use uart2 ,not set ouput low
-#else    
-        //UART2_RX
-    Scu_SetIOReuse( UART2_RX_PAD,THIRD_FUNCTION);
-    GPIO_Output(GPIO0,GPIO_Pin6,0);  
-#endif 
+//#if (USE_USER_UART && !USER_UART_USE_UART1) 
+//     //use uart2 ,not set ouput low
+//#else    
+//        //UART2_RX
+//    Scu_SetIOReuse( UART2_RX_PAD,THIRD_FUNCTION);
+//    GPIO_Output(GPIO0,GPIO_Pin6,0);  
+//#endif 
 
 #endif    
     
@@ -125,7 +126,23 @@ void _IO_init(void)
     GPIO_Output(GPIO1,GPIO_Pin17,0);   
 	
     Scu_SetIOReuse(UART3_TX_PAD,THIRD_FUNCTION);//pin11-led1
-    GPIO_Output(GPIO0,GPIO_Pin7,0);    	    
+    GPIO_Output(GPIO0,GPIO_Pin7,1);  
+	
+    Scu_SetIOReuse(I2C1_SDA_PAD,THIRD_FUNCTION);//pin10-powerlock
+    GPIO_Output(GPIO0,GPIO_Pin16,0);  	
+	
+	Scu_SetIOReuse(I2C1_SCL_PAD,THIRD_FUNCTION);//pin9-powerinit
+    GPIO_Input(GPIO0,(GPIO_Pinx)15);		
+    
+    Scu_SetIOReuse(UART2_TX_PAD,THIRD_FUNCTION);//pin15-key2
+    GPIO_Input(GPIO0,(GPIO_Pinx)5);		
+    
+    Scu_SetIOReuse(UART2_RX_PAD,THIRD_FUNCTION);//pin16-key3
+    GPIO_Input(GPIO0,(GPIO_Pinx)6);		
+    
+    Scu_SetIOReuse(CAN_TX_PAD,THIRD_FUNCTION);//pin17-key4
+    GPIO_Input(GPIO0,(GPIO_Pinx)11);		
+    
 #if USE_ASR8388        
     //AIN2
     Scu_SetIOReuse(AIN2_PAD,THIRD_FUNCTION);
@@ -231,9 +248,6 @@ void prvSetupHardware(void)
   
     userapp_initial();
    //------key init
-    #if ADKEY_ENABLE    
-    ADKey_Init(0);
-    #endif
     
 #if USE_IWDG
    extern int  iwdg_rstInit(int sec);
@@ -467,7 +481,7 @@ static void vTaskCreate (void)
         "vTask_Test",       /* 任务名    */
         256,                    /* 任务栈大小，单位word，也就是4字节 */
         NULL,                   /* 任务参数  */
-        3,                      /* 任务优先级*/
+        2,                      /* 任务优先级*/
         NULL );   /* 任务句柄  */   
 #if USE_S_MIC_DENOISE
      extern void vTask_Denoise(void *pvParameters);
@@ -485,6 +499,7 @@ static void vTaskCreate (void)
     #endif 
 #endif 
     xTaskCreate(UserTaskManageProcess,"UserTaskManageProcess",512,NULL,4,NULL);
+    xTaskCreate(UserTaskKeyScan,"UserTaskKeyScan",512,NULL,3,NULL);
 
 
 }
