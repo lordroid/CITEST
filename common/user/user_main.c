@@ -8,6 +8,8 @@
   ******************************************************************************
   **/
 #include <stdint.h>
+#include <stdio.h>
+#include <string.h>
 #include "user_main.h"
 #include "FreeRTOS.h"
 #include "ci100x_global.h"
@@ -30,8 +32,8 @@ struct user_manage_type
     uint32_t wakeup_voice_state;
 }g_user_manage_t ;
 
-#define SPKEYCNT 1200      //short press key count
-#define LPKEYCNT 50000     //long press key count
+#define SPKEYCNT 60000      //short press key count
+#define LPKEYCNT 1000000     //long press key count
 #define nokey 0
 
 
@@ -41,7 +43,7 @@ struct user_manage_type
 #define key2            GPIO_ReadDATA(GPIO0,(GPIO_Pinx)6)
 
 
-unsigned char tempkey1,tempkey2,tempkey3,keyvalue;
+unsigned char tempkey1,tempkey2,tempkey3;
 
 unsigned long keycnt=0;
 
@@ -56,6 +58,7 @@ extern void uart2_send_AsrResult(unsigned int index,float score);
 extern void RGBChangeColor(int index);
 extern void RGBDataInit(void);
 extern void IWDG_feed(void);
+extern void suart2_send(char *buffer,int lenth);
 
 
 #if USE_USER_UART
@@ -69,26 +72,27 @@ BaseType_t send_play_by_func_index(int32_t func_index);
 /**************************************************************************
                     global 
 ****************************************************************************/
-	void Key_Scan(void)
+	unsigned char Key_Scan(void)
 	{
 	  static unsigned char	slowkeyhold;
 	  static unsigned long	temp;
+	  unsigned char keyvalue;
 	  tempkey3 = tempkey2;
 	  if (key3==0)
 	  { tempkey1 = key3evt; }
-	  else if (!key1)
-	  { tempkey1 = key1evt; }
-	  else if (!key2)
-	  { tempkey1 = key2evt; }
+//	  else if (key1==0)
+//	  { tempkey1 = key1evt; }
+//	  else if (key2==0)
+//	  { tempkey1 = key2evt; }
 	  else
 	  { 
 		  tempkey1 = nokey;
 	  }
 	
-	  if (!key2)
-	  { tempkey1 |= key2evt; }
-	  else if (!key1)
-	  { tempkey1 |= key1evt; }
+//	  if (!key2)
+//	  { tempkey1 |= key2evt; }
+//	  else if (!key1)
+//	  { tempkey1 |= key1evt; }
 	
 	  if (tempkey2!=tempkey1)
 	  { 
@@ -99,7 +103,7 @@ BaseType_t send_play_by_func_index(int32_t func_index);
 	  }
 	  else
 	  {
-		if (keycnt<150000)
+		if (keycnt<2500000)
 		{ keycnt += 1; }
 		else
 		{ keycnt = LPKEYCNT + 1; }/**/
@@ -109,27 +113,28 @@ BaseType_t send_play_by_func_index(int32_t func_index);
 	  {
 		keycnt = 0;
 		keyvalue = nokey;											  // 1.nokey
-		return;
+		return nokey;
 	  }
-	  if ((keycnt==SPKEYCNT)&&(tempkey2!=nokey))
+	  
+	  else if ((keycnt==SPKEYCNT)&&(tempkey2!=nokey))
 	  {
 		keyvalue = tempkey3;										  // 2.key?evt
-		return;
+		return keyvalue;
 	  }
-	  if ((keycnt>=SPKEYCNT)&&(keycnt<LPKEYCNT)&&(tempkey2==nokey)) 		  // keycnt>=SPKEYCNT
+	  else if ((keycnt>=SPKEYCNT)&&(keycnt<LPKEYCNT)&&(tempkey2==nokey)) 		  // keycnt>=SPKEYCNT
 	  {
 		keycnt = 0;
 		keyvalue = tempkey3|keyrelease; 							  // 3.key?evt|keyrelease
-		return;
+		return keyvalue;
 	  }
-	  if ((keycnt==LPKEYCNT)&&(tempkey2!=nokey))
+	  else if ((keycnt==LPKEYCNT)&&(tempkey2!=nokey))
 	  {
 		keyvalue = tempkey3|keyhold;								  // 4.key?evt|keyhold
 		slowkeyhold = 0;
 		temp = SPKEYCNT*80;
-		return;
+		return keyvalue;
 	  }
-	  if ((keycnt>LPKEYCNT)&&(tempkey2!=nokey))
+	  else if ((keycnt>LPKEYCNT)&&(tempkey2!=nokey))
 	  {
 		if ((keycnt%temp)==0)
 		{
@@ -140,15 +145,19 @@ BaseType_t send_play_by_func_index(int32_t func_index);
 		  else
 		  { temp = SPKEYCNT; }
 		  keyvalue = tempkey3|keyhold|keepholding;					  // 5.key?evt|keyhold|keepholding
+		  return keyvalue;
 		}
-		return;
+		else
+		return nokey;
 	  }
-	  if ((keycnt>=LPKEYCNT)&&(tempkey2==nokey))//&&(slowkeyhold==0)
+	  else if ((keycnt>=LPKEYCNT)&&(tempkey2==nokey))//&&(slowkeyhold==0)
 	  {
 		keycnt = 0;
 		keyvalue = tempkey3|keyhold|keyrelease; 					  // 6. key?evt|keyhold|keyrelease
-		return;
+		return keyvalue;
 	  }
+	  else 
+	  	return nokey;
 	}
 
 void Switch_Language_play_voice(void)
@@ -268,20 +277,23 @@ void GetNVUserData(void)
 }
 void  UserTaskKeyScan(void *p_arg)
 {
-
-    
+    uint32_t keyvalue,keyvalueprv;
+    char dbgbuff[150];
+	
     while(1)
     {
 //        iwdg_rstInit(IWDG_TIME); 
 	    IWDG_feed();
-
-        Key_Scan();
-		if(keyvalue != nokey)	
+        keyvalue=(uint32_t)Key_Scan();
+		if((keyvalue != nokey)&&(keyvalue!=keyvalueprv))	
 		{
+		    keyvalueprv=keyvalue;
 		    user_msg_t send_msg;
             send_msg.msg_type = MSG_TYPE_SYS_KEY;
-            send_msg.msg_data.key_data.key = keyvalue;
-			xQueueSend(user_task_queue,&send_msg,20/portTICK_PERIOD_MS);
+            send_msg.msg_data.key_data.key =keyvalue;
+			sprintf(dbgbuff,"keyvalue is %d \r\n",keyvalue);
+			suart2_send(dbgbuff,strlen(dbgbuff));
+			xQueueSend(user_task_queue,&send_msg,portMAX_DELAY);			
 			keyvalue = nokey;
 		}
 	}
@@ -386,10 +398,10 @@ void userapp_deal_asr_msg(sys_asr_msg_data_t *asr_msg)
         }
 #endif
 
-        #if USE_USER_UART
-        if(awaken)
-            uart2_send_AsrResult(function_index,asr_msg->asr_score);
-        #endif
+//        #if USE_USER_UART
+//        if(awaken)
+//            uart2_send_AsrResult(function_index,asr_msg->asr_score);
+//        #endif
     }
 
 }

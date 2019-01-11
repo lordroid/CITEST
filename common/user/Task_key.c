@@ -7,6 +7,7 @@
 
 extern int user_code_updata_fromTF();
 extern int cx2092x_upgrade(void);
+extern void suart2_send(char *buffer,int lenth);
 
 extern void vol_up();
 extern void  vol_dn();
@@ -41,8 +42,11 @@ void end_updata()
 
 void userapp_deal_key_msg(sys_key_msg_data_t  *key_msg)
 {
-    uint32_t key;    
+    uint32_t key; 
+	char dbgbuff[150];
     key = key_msg->key;
+			sprintf(dbgbuff,"rcv keyvalue is %d \r\n",key);
+			suart2_send(dbgbuff,strlen(dbgbuff));	
     switch(key)
     {
         case (key3evt|keyhold):
@@ -59,21 +63,19 @@ void userapp_deal_key_msg(sys_key_msg_data_t  *key_msg)
 	            GPIO_Output(GPIO0,GPIO_Pin16,0);
 			}
             break;
-//        case key3evt|keyhold|keyrelease:
-//			key_holding_flag = 0;
-//			break;
-//		case key3evt|keyhold|keepholding :
-//			key_holding_flag = 1;
-//			break;	
-//        case key3evt|keyhold|keepholding|keyrelease :
-//            key_holding_flag = 0;
-//            break;
-//        case key3evt|keyrelease :
-//            if(MCUwork==0)
-//            {                                    
-//                GPIO_Output(GPIO0,GPIO_Pin16,0);                   
-//            } 
-//			break;
+        case key3evt|keyhold|keyrelease:
+			key_holding_flag = 0;
+			break;
+		case key3evt|keyhold|keepholding :
+			key_holding_flag = 1;
+			break;	
+
+        case key3evt|keyrelease :
+            if(MCUwork==0)
+            {                                    
+                GPIO_Output(GPIO0,GPIO_Pin16,0);                   
+            } 
+			break;
         default:
             break;
     }

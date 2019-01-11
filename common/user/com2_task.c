@@ -81,20 +81,20 @@ void suart2_send(char *buffer,int lenth)
 {
     char tc_sum;
     
-    if(buffer==NULL)
-    {
-        mprintf("err com send buf\r\n");
-        return;
-    }        
-    if((lenth<=4)||(lenth > sizeof(sys_com_msg_data_t)))
-    {
-        mprintf("err com send lenth %d \r\n",lenth);
-        return;
-    }else
-    {
-        lenth -= 2;//last 2 byte not send
-    }
-    
+//    if(buffer==NULL)
+//    {
+//        mprintf("err com send buf\r\n");
+//        return;
+//    }        
+//    if((lenth<=4)||(lenth > sizeof(sys_com_msg_data_t)))
+//    {
+//        mprintf("err com send lenth %d \r\n",lenth);
+//        return;
+//    }else
+//    {
+//        lenth -= 2;//last 2 byte not send
+//    }
+//    
     tc_sum = 0;
     
 #if USER_UART_USE_UART1
@@ -116,6 +116,46 @@ void suart2_send(char *buffer,int lenth)
 #endif    
   
 }
+
+//void suart2_send(char *buffer,int lenth)
+//{
+//    char tc_sum;
+//    
+//    if(buffer==NULL)
+//    {
+//        mprintf("err com send buf\r\n");
+//        return;
+//    }        
+//    if((lenth<=4)||(lenth > sizeof(sys_com_msg_data_t)))
+//    {
+//        mprintf("err com send lenth %d \r\n",lenth);
+//        return;
+//    }else
+//    {
+//        lenth -= 2;//last 2 byte not send
+//    }
+//    
+//    tc_sum = 0;
+//    
+//#if USER_UART_USE_UART1
+//    while(lenth--)    
+//    {
+//        tc_sum += *buffer;
+//        UartPollingSenddata(UART1,*buffer++);
+//    }  
+//    UartPollingSenddata(UART1,tc_sum);//send sum
+//    UartPollingSenddata(UART1,UART_END);    
+//#else    
+//    while(lenth--)    
+//    {
+//        tc_sum += *buffer;
+//        S_Uart_PutChar(SUART0,*buffer++);
+//    }  
+//       S_Uart_PutChar(SUART0,tc_sum);//send sum
+//    S_Uart_PutChar(SUART0,UART_END);
+//#endif    
+//  
+//}
 
 void suart0_rx_handle(unsigned char rxdata)
 {    

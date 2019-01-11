@@ -1,22 +1,22 @@
-"E:\工作\2019\ci1006\软件\common\user\com2_task.c"
+"E:\工作\2019\ci1006\ci-test-git\common\user\com2_task.c"
 -std=c++98
 -ferror-limit=100
 -I
-E:\工作\2019\ci1006\软件\project\user\..\..\drivers\inc
+E:\工作\2019\ci1006\ci-test-git\project\user\..\..\drivers\inc
 -I
-E:\工作\2019\ci1006\软件\project\user\..\..\freertos\include
+E:\工作\2019\ci1006\ci-test-git\project\user\..\..\freertos\include
 -I
-E:\工作\2019\ci1006\软件\project\user\..\..\common\user
+E:\工作\2019\ci1006\ci-test-git\project\user\..\..\common\user
 -I
-E:\工作\2019\ci1006\软件\project\user\..\..\ci_denoise
+E:\工作\2019\ci1006\ci-test-git\project\user\..\..\ci_denoise
 -I
-E:\工作\2019\ci1006\软件\project\user..\..\..\bsp_test\inc
+E:\工作\2019\ci1006\ci-test-git\project\user..\..\..\bsp_test\inc
 -I
-E:\工作\2019\ci1006\软件\project\user\..\..\..\bsp_test\src
+E:\工作\2019\ci1006\ci-test-git\project\user\..\..\..\bsp_test\src
 -I
-E:\工作\2019\ci1006\软件\project\user\..\..\freertos\portable\IAR\ARM_CM4F
+E:\工作\2019\ci1006\ci-test-git\project\user\..\..\freertos\portable\IAR\ARM_CM4F
 -I
-E:\工作\2019\ci1006\软件\project\user\..\..\fatfs
+E:\工作\2019\ci1006\ci-test-git\project\user\..\..\fatfs
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.0\arm\inc
 -I
@@ -24,21 +24,21 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.0\arm\inc\c
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.0\arm\inc\cpp
 -I
-E:\工作\2019\ci1006\软件\drivers\inc
+E:\工作\2019\ci1006\ci-test-git\drivers\inc
 -I
-E:\工作\2019\ci1006\软件\freertos\include
+E:\工作\2019\ci1006\ci-test-git\freertos\include
 -I
-E:\工作\2019\ci1006\软件\common\user
+E:\工作\2019\ci1006\ci-test-git\common\user
 -I
-E:\工作\2019\ci1006\软件\ci_denoise
+E:\工作\2019\ci1006\ci-test-git\ci_denoise
 -I
-E:\工作\2019\ci1006\软件\bsp_test\inc
+E:\工作\2019\ci1006\ci-test-git\bsp_test\inc
 -I
 E:\工作\2019\ci1006\bsp_test\src
 -I
-E:\工作\2019\ci1006\软件\freertos\portable\IAR\ARM_CM4F
+E:\工作\2019\ci1006\ci-test-git\freertos\portable\IAR\ARM_CM4F
 -I
-E:\工作\2019\ci1006\软件\fatfs
+E:\工作\2019\ci1006\ci-test-git\fatfs
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
@@ -244,8 +244,8 @@ E:\工作\2019\ci1006\软件\fatfs
 -D__HAS_LOCATED_DECLARATION__=1
 -D__HAS_LOCATED_WITH_INIT__=1
 -D__IAR_COMPILERBASE__=593666
--D__DATE__="Jan  8 2019"
--D__TIME__="16:00:17"
+-D__DATE__="Jan 10 2019"
+-D__TIME__="10:10:48"
 -D__STDC__=1
 -D__cplusplus=199711L
 -D__WCHAR_T=1
