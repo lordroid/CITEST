@@ -1087,16 +1087,18 @@ void iis1_8374_play_init(void)
     DelayMs(20);
     I2C_WriteEs8374Data(ES8374_14_ANALOG_REFERENCE,0x8a);    //ic start
     I2C_WriteEs8374Data(ES8374_15_ANALOG_POWER_DOWN,0x40);    //ic start  //0x40
-    I2C_WriteEs8374Data(ES8374_1A_MONO_OUT_SELECTION,0xa0);    //mono out set
+    I2C_WriteEs8374Data(ES8374_1A_MONO_OUT_SELECTION,0xe0);    //mono out set    
+//    I2C_WriteEs8374Data(ES8374_1A_MONO_OUT_SELECTION,0xa0);    //mono out set
     I2C_WriteEs8374Data(ES8374_1B_MONO_OUT_GAIN,0x19);    //mono out set     0x19
-  
-    I2C_WriteEs8374Data(ES8374_1C_MIXER,0x90);    // spk set
-    //I2C_WriteEs8374Data(ES8374_1D_MIXER_GAIN,0x02);    //spk set
-    I2C_WriteEs8374Data(ES8374_1D_MIXER_GAIN,0x00);    //spk set
-    I2C_WriteEs8374Data(ES8374_1F_SPEAKER,0x06);    //spk set, Circuit Protection, Speaker D low power mode
-    //I2C_WriteEs8374Data(ES8374_1E_SPEAKER,0xa0);    //spk on
-    I2C_WriteEs8374Data(ES8374_1E_SPEAKER,0xa7);    //spk on//20180224
-//    I2C_WriteEs8374Data(ES8374_28_ALC_CONTROL,0x00);    //alc set
+    I2C_WriteEs8374Data(ES8374_1C_MIXER,0x30);    // spk set
+//    I2C_WriteEs8374Data(ES8374_1C_MIXER,0x90);    // spk set
+    I2C_WriteEs8374Data(ES8374_1D_MIXER_GAIN,0x10);    //spk set
+//    I2C_WriteEs8374Data(ES8374_1D_MIXER_GAIN,0x00);    //spk set
+//    I2C_WriteEs8374Data(ES8374_1F_SPEAKER,0x06);    //spk set, Circuit Protection, Speaker D low power mode
+    I2C_WriteEs8374Data(ES8374_1F_SPEAKER,0x06);    //spk set, Circuit Protection, Speaker D low power mode   
+    I2C_WriteEs8374Data(ES8374_1E_SPEAKER,0x40);    //spk on//20180224
+//    I2C_WriteEs8374Data(ES8374_1E_SPEAKER,0xa7);    //spk on//20180224
+
     I2C_WriteEs8374Data(ES8374_25_ADC_CONTROL,0x00);    //adc volume on
     I2C_WriteEs8374Data(ES8374_38_DAC_CONTROL,0x00);    //dac volumel on
     I2C_WriteEs8374Data(ES8374_08_CLOCK_MANAGER,0x08);    //dac volumel on
@@ -1536,12 +1538,12 @@ void send_4_zero_buffer(void)
 
 void ES8374_CloseSpeaker(void)
 {
-    I2C_WriteEs8388Data(0x1E,0x20);
+//    I2C_WriteEs8388Data(0x1E,0x20);
 }
 
 void ES8374_OpenSpeaker(void)
 {
-    I2C_WriteEs8388Data(0x1E,0xa7);
+//    I2C_WriteEs8388Data(0x1E,0xa7);
 }
 
 extern void CodeGPIOTimeTest(void);

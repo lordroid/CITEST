@@ -82,25 +82,6 @@ void _IO_init(void)
 {
     Scu_SetDeviceGate((unsigned int)GPIO0,ENABLE);
     Scu_SetDeviceGate((unsigned int)GPIO1,ENABLE);
-
-#if MASS_FACTOR      
-    // UART0_RX                                       
-    Scu_SetIOReuse( UART0_RX_PAD,THIRD_FUNCTION);
-    GPIO_Output(GPIO0,GPIO_Pin0,0);      
-  
-    // UART1_RX                                       
-    Scu_SetIOReuse( UART1_RX_PAD,THIRD_FUNCTION);
-    GPIO_Output(GPIO0,GPIO_Pin2,0);    
-    
-//#if (USE_USER_UART && !USER_UART_USE_UART1) 
-//     //use uart2 ,not set ouput low
-//#else    
-//        //UART2_RX
-//    Scu_SetIOReuse( UART2_RX_PAD,THIRD_FUNCTION);
-//    GPIO_Output(GPIO0,GPIO_Pin6,0);  
-//#endif 
-
-#endif    
     
     // i2s0_sck                                       
     Scu_SetIOReuse( I2S0_SCLK_PAD,THIRD_FUNCTION);
@@ -141,28 +122,26 @@ void _IO_init(void)
     GPIO_Input(GPIO0,(GPIO_Pinx)6);		
     
     Scu_SetIOReuse(CAN_TX_PAD,THIRD_FUNCTION);//pin17-key4
-    GPIO_Input(GPIO0,(GPIO_Pinx)11);		
-    
-#if USE_ASR8388        
-    //AIN2
-    Scu_SetIOReuse(AIN2_PAD,THIRD_FUNCTION);
-    GPIO_Output(GPIO1,GPIO_Pin20,0);    
-#endif    
-    //AIN3
-    Scu_SetIOReuse(AIN3_PAD,THIRD_FUNCTION);
-    GPIO_Output(GPIO1,GPIO_Pin21,0);    
-    //AIN4
-    Scu_SetIOReuse(AIN4_PAD,THIRD_FUNCTION);
-    GPIO_Output(GPIO1,GPIO_Pin22,0);      
-    //AIN5
-    Scu_SetIOReuse(AIN5_PAD,THIRD_FUNCTION);
-    GPIO_Output(GPIO1,GPIO_Pin23,0);  
-    //AIN6
-    Scu_SetIOReuse(AIN6_PAD,THIRD_FUNCTION);
-    GPIO_Output(GPIO1,GPIO_Pin24,0);   
-    //AIN7
-    Scu_SetIOReuse(AIN7_PAD,THIRD_FUNCTION);
-    GPIO_Output(GPIO1,GPIO_Pin25,0);                                          
+    GPIO_Input(GPIO0,(GPIO_Pinx)11);    
+
+    Scu_SetIOReuse(SPI1_CLK_PAD,THIRD_FUNCTION);//pin38-mp3sclk
+    GPIO_Input(GPIO1,(GPIO_Pinx)8);  
+	
+    Scu_SetIOReuse(SPI1_CS_PAD,THIRD_FUNCTION);//pin39-mp3csn
+    GPIO_Output(GPIO1,GPIO_Pin7,0);  
+	
+    Scu_SetIOReuse(SPI1_DIN_PAD,THIRD_FUNCTION);//pin40-mp3si
+    GPIO_Input(GPIO1,(GPIO_Pinx)6);
+	
+    Scu_SetIOReuse(SPI1_DOUT_PAD,THIRD_FUNCTION);//pin41-mp3so
+    GPIO_Output(GPIO1,GPIO_Pin5,0); 
+	
+    Scu_SetIOReuse(UART1_RTS_PAD,THIRD_FUNCTION);//pin42-mp3gdo
+    GPIO_Output(GPIO0,GPIO_Pin4,0); 
+	
+    Scu_SetIOReuse(UART1_CTS_PAD,THIRD_FUNCTION);//pin43-mp3play
+    GPIO_Input(GPIO0,(GPIO_Pinx)3);     
+	
 }
 
 extern void GetNVUserData(void);
